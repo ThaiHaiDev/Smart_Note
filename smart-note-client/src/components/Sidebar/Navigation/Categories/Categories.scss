@@ -1,0 +1,96 @@
+.wrapper_category {
+    width: 100%;
+    margin-top: 4px;
+}
+
+.menu {
+    background: #0076ff;
+    color: white;
+    border-radius: 20px;
+    width: 100%;
+    min-width: 40px;
+    display: inline-block;
+}
+
+.menu-item {
+    color: white;
+    background: #0076ff;
+    border-radius: 0 !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+.ant-menu-inline .ant-menu-item::after {
+    border-right: none;
+}
+
+.menu .ant-menu-sub.ant-menu-inline {
+    background: #0076ff;
+    max-height: 18vh !important;
+    overflow-y: scroll;
+    border-radius: 0 0 20px 20px;
+}
+
+.ant-menu-sub.ant-menu-inline::-webkit-scrollbar {
+    display: none;
+}
+
+.ant-menu-item-active {
+    color: white;
+    transition: 0.3s;
+    &:hover {
+        background: #0000ff;
+        .icon-delete {
+            display: inline;
+        }
+    }
+}
+
+.menu .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: white;
+}
+
+.ant-menu-title-content {
+    color: white;
+    margin-left: 0;
+}
+
+.menu .ant-menu-item.ant-menu-item-selected.menu-item {
+    span {
+        color: black;
+    }
+}
+
+.menu .ant-menu-submenu-title {
+    &:active,
+    &:focus-visible {
+        background: none;
+    }
+}
+
+.menu .ant-menu-submenu-arrow {
+    color: white;
+}
+
+.menu.ant-menu-submenu:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow {
+    color: white;
+}
+
+.ant-popover-inner {
+    border-radius: 8px;
+}
+
+.icon-delete {
+    float: right;
+    display: none;
+    margin-top: 12px;
+    font-size: 1.2rem !important;
+    &:hover {
+        color: var(--white);
+    }
+}
+
+.item-click {
+    display: inline-block;
+    width: 70%;
+}

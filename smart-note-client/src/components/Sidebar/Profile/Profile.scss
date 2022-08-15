@@ -1,0 +1,45 @@
+.profile {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 50px;
+    margin-left: 10px;
+
+    .username {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 8px;
+        align-items: center;
+        margin-bottom: 10px;
+        color: var(--white);
+    }
+
+    .email {
+        font-style: italic;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 8px;
+        color: var(--white);
+        margin-bottom: 0;
+    }
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.icon-logout {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 85px;
+}

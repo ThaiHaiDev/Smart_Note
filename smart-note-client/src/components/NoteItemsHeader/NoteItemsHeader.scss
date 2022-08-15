@@ -1,0 +1,31 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    color: var(--text-color);
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        font-weight: bold;
+        line-height: 1.6;
+        letter-spacing: 0.05ch;
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        .add-icon {
+            color: var(--text-color);
+            font-size: 2.2rem;
+            font-weight: 300;
+        }
+    }
+
+    .header-totalnote {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+}

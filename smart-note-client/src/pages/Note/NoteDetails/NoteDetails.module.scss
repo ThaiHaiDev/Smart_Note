@@ -1,0 +1,235 @@
+.container {
+    background-color: var(--background-color);
+    padding: 20px;
+    min-height: 100vh;
+    flex: 1;
+}
+
+.header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+
+    label {
+        background-color: #ddd;
+        color: var(--text-color);
+        bottom: -200px;
+        font-size: 1.4rem;
+        padding: 8px 12px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+
+        &:hover {
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .down-arrow {
+            margin-left: 8px;
+        }
+    }
+
+    .category-dropdown {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 140px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        overflow: hidden;
+        z-index: 1;
+
+        option {
+            color: black;
+            padding: 12px 16px;
+            display: block;
+            font-size: 1.4rem;
+
+            &:hover {
+                background-color: #f1f1f1;
+            }
+        }
+    }
+
+    .show {
+        display: block;
+    }
+
+    .label-button {
+        display: flex;
+
+        button {
+            background-color: tomato;
+            color: var(--white);
+            font-size: 1rem;
+            padding: 8px 12px;
+            margin-right: 6px;
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+
+    input {
+        margin-bottom: 10px;
+        padding: 8px;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: var(--text-color);
+        background-color: transparent;
+        border: none;
+    }
+
+    textarea {
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 50vh;
+        padding: 10px;
+        resize: none;
+        font-size: 1.4rem;
+        color: var(--text-color);
+        border: none;
+        border-radius: 12px;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+        margin-left: 6px;
+        font-size: 1.4rem;
+    }
+
+    .footer__attachment-value {
+        background-color: white;
+        border: 1px solid #ddd;
+        min-width: 100px;
+        padding: 12px;
+        margin-left: 6px;
+    }
+
+    .attachfile {
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+
+    input {
+        width: 200px;
+    }
+
+    .btn-save {
+        background-color: #328cff;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: white;
+        border-radius: 10px;
+        padding: 6px 16px;
+    }
+
+    .btn-save:hover {
+        background-color: var(--blue);
+        color: var(--white);
+        cursor: pointer;
+    }
+}
+
+.no-active-note {
+    width: 70%;
+    height: 100vh;
+    line-height: 100vh;
+    text-align: center;
+    font-size: 2rem;
+    color: #999;
+}
+
+.content__select {
+    color: var(--text-color);
+    min-width: 130px;
+    display: flex;
+    justify-content: space-between;
+
+    select {
+        color: black;
+        border: none;
+        padding: 6px 12px;
+        font-size: 1.4rem;
+    }
+}
+
+// responsive for ipad
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1200px) {
+    .container {
+        min-width: var(--col-8);
+        margin-right: -8px;
+    }
+}
+
+.custom-select {
+    position: relative;
+    font-family: Arial;
+    display: flex;
+    justify-content: space-between;
+}
+
+.select-selected {
+    background-color: DodgerBlue;
+}
+
+.select-selected:after {
+    position: absolute;
+    content: '';
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+.select-selected {
+    .select-arrow-active:after {
+        border-color: transparent transparent #fff transparent;
+        top: 7px;
+    }
+}
+
+.select-items div,
+.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+.select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.select-tag {
+    min-width: 250px;
+    max-width: 350px;
+}

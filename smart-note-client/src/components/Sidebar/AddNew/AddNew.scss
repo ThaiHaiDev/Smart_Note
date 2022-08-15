@@ -1,0 +1,47 @@
+.addnew {
+    margin: 20px 15px 0 15px;
+    color: white;
+    width: auto;
+
+    &__icon {
+        font-size: 16px;
+        &-small {
+            margin-left: 6px;
+            font-size: 10px;
+        }
+    }
+
+    &__popup {
+        margin-top: 4px;
+        background-color: #559ef1;
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    &__btn-add {
+        justify-content: flex-start;
+        font-weight: 400;
+        padding: 12px;
+        border-radius: 20px;
+        font-size: 14px;
+
+        & + & {
+            margin-top: 10px;
+        }
+    }
+}
+
+#loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
